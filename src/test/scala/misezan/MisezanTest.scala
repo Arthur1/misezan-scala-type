@@ -11,6 +11,9 @@ class MisezanTest extends AnyFunSuite with Matchers {
     implicitly[Aux[_1, _1, _0]]
     implicitly[Aux[_3, _3, _0]]
 
+    mise(_1, _1): _0
+    mise(_3, _3): _0
+
     mise(_1, _1).toInt shouldBe 0
     mise(_3, _3).toInt shouldBe 0
   }
@@ -19,6 +22,10 @@ class MisezanTest extends AnyFunSuite with Matchers {
     implicitly[Aux[_1, _2, _2]]
     implicitly[Aux[_2, _1, _2]]
     implicitly[Aux[_3, _0, _3]]
+
+    mise(_1, _2): _2
+    mise(_2, _1): _2
+    mise(_3, _0): _3
 
     mise(_1, _2).toInt shouldBe 2
     mise(_2, _1).toInt shouldBe 2
